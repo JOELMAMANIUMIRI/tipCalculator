@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TipCalculator.TipGrid"
+             Title="TipGrid">
+
+    <Grid RowDefinitions="Auto, Auto, Auto, *, Auto, Auto, Auto" 
+          ColumnDefinitions="*, *" Padding="40">
+            <Label Text="Welcome to .NET MAUI!" VerticalOptions="Center" HorizontalOptions="Center"/>
+
+
+            <Label Text="Total da conta" Grid.Row="0" Grid.Column="0" VerticalOptions="Center"/>
+            <Entry x:Name="Grid_billInput" Placeholder="Insira o valor" Keyboard="Numeric" Grid.Row="0" Grid.Column="1" VerticalOptions="Center"/>
+        
+
+        
+            <Label Text="Tip" WidthRequest="100"/>
+            <Label x:Name="Grid_tipOutput" Text="0.00"/>
+        
+
+        
+            <Label Text="Total" WidthRequest="100"/>
+            <Label x:Name="Grid_totalOutput" Text="0.00"/>
+        
+
+        
+            <Label Text="Porcentagem de gorjeta" WidthRequest="100"/>
+            <Label x:Name="Grid_tipPercent" Text="50%"/>
+       
+
+        <Slider x:Name="Grid_tipPercentSlider" Minimum="0" Maximum="100" Value="15"/>
+
+
+        
+            <Button Text="15%" Clicked="Grid_OnNormalTip" WidthRequest="150" HorizontalOptions="Center"/>
+            <Button Text="20%" Clicked="Grid_OnGenerousTip" WidthRequest="150" HorizontalOptions="Center"/>
+        
+
+
+        
+            <Button x:Name="Grid_roundDown" Text="Round Down" Clicked="Grid_roundDown_Clicked" WidthRequest="150" HorizontalOptions="Center"/>
+            <Button x:Name="Grid_roundUp" Text="Round Up" Clicked="Grid_roundUp_Clicked" WidthRequest="150" HorizontalOptions="Center"/>
+        
+
+
+    </Grid>
+</ContentPage>
